@@ -125,3 +125,92 @@ not equal to 0 and return only those countries with an average score greater tha
 
 --drop table persons
 
+-- Insert new customers
+
+--insert into customers(id, first_name, country, score) 
+--values
+--	(6,'Anna','USA',Null),
+--	(7,'Sam',Null,100)
+
+--insert into customers
+--values
+--	(8,'Prabal','India',650),
+--	(9,'Sameer','UAE',100)
+
+--Insert into customers (id, first_name)
+--values
+--(10,'Sahra')
+
+--Select * from customers
+
+--Copy data from customers table into persons table
+
+--Create table persons 
+--(id int not null,
+--person_name varchar(50) not null,
+--birth_date date null,
+--phone_number varchar(15) not null
+--Constraint PK_persons primary key (id)
+--)
+
+--Insert into persons (id, person_name,birth_date,phone_number)
+--Select 
+--id,
+--first_name,
+--null,
+--'Unknown'
+--From customers
+
+--Select * from persons
+
+--Change the score of customer id 6 to 0
+--Select *
+--from customers
+--begin tran
+--Update customers
+--Set score=0
+--where id=6
+--Commit tran
+
+-- change the score of customer with ID 10 to 0 and update the country to 'UK'
+
+--Select * from customers
+
+--Begin tran
+
+--Update customers
+--set 
+--score = 0,
+--country = 'UK'
+--where id= 10
+
+--Commit tran
+
+-- Update all customers with a null score by setting their score to 0
+
+--Select * from customers
+
+--begin tran
+
+--Update customers
+--set
+--score=0
+--where score IS null
+
+--Commit tran
+
+-- Delete all customers with an ID greater than 5
+
+--Begin tran
+
+--Delete from customers
+--where id> 5
+
+--Select * from customers
+
+--rollback
+
+-- Delete all data from table persons
+
+--Truncate table persons
+
