@@ -214,3 +214,81 @@ not equal to 0 and return only those countries with an average score greater tha
 
 --Truncate table persons
 
+-- Retrive all customers from germany
+
+--Select *
+--from customers
+--where country='Germany'
+
+-- Retrive all customers not from germany
+--Select *
+--from customers
+--where country !='Germany'
+
+-- Retrive all customers with score greater than 500
+
+--Select *
+--from customers
+--where score> 500
+
+-- Retrive all customers with score of 500 or more
+--Select *
+--from customers
+--where score >= 500
+
+-- Retrive all customers with score less than 500
+--Select *
+--from customers
+--where score < 500
+
+-- Retrive all customers with score less than or equal to 500
+--Select *
+--from customers
+--where score <= 500
+
+-- All customers who are from USA and have score above 500
+--Select *
+--from customers
+--where country ='USA' and score > 500
+
+-- All customers who are either from USA or have score above 500
+--Select *
+--from customers
+--where country='USA' or score > 500
+
+-- All customers with score not less than 500
+--Select *
+--from customers
+--where not score < 500
+
+--All customers whose score falls in the range between 100 and 500
+--Select *
+--from customers
+--where score between 100 and 500
+
+-- Get all customers either from germany or usa using in
+--Select *
+--from customers
+--where country in ('Germany','USA')
+
+-- Get all customers whose name starts with 'M'
+
+--Select *
+--from customers
+--where first_name like 'm%'
+
+-- Get all customers whose name ends with 'N'
+--Select *
+--from customers
+--where first_name like '%n'
+
+-- get all customers whose first name contains r
+--Select *
+--from customers
+--where first_name like '%r%'
+
+-- get all customers whose first name contains r in third position
+--Select *
+--from customers
+--where first_name like '__r%'
+
