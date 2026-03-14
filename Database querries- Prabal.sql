@@ -292,3 +292,47 @@ not equal to 0 and return only those countries with an average score greater tha
 --from customers
 --where first_name like '__r%'
 
+-- Get all data from customers and orders
+--select *
+--from customers;
+--select *
+--from orders
+
+-- get all customers along with their orders, but only for customers who have placed their orders
+
+--select *
+--from orders;
+
+--Select *
+--from customers;
+
+--select
+--	c.id,
+--	c.first_name,
+--	o.order_id,
+--	o.sales
+--from 
+--customers as c inner join orders as o
+--on c.id = o.customer_id
+
+-- get all customers with all their orders along with those without orders
+
+--select *
+--from customers as c
+--left join orders as o
+--on c.id = o.customer_id
+
+-- get all customers along with their orders, including orders without matching customers
+
+--select *
+--from customers as c
+--right join orders as o
+--on c.id = o.customer_id
+
+-- get all customers along with their orders, including orders without matching customers (using left join)
+
+--select *
+--from orders as o
+--left join customers as c
+--on o.customer_id = c.id
+
