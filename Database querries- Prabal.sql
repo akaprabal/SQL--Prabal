@@ -336,3 +336,69 @@ not equal to 0 and return only those countries with an average score greater tha
 --left join customers as c
 --on o.customer_id = c.id
 
+-- get all customers and all orders even if there is no match
+
+--select *
+--from customers as c
+--full join orders as o
+--on c.id=o.customer_id
+
+-- get all customers who have not placed any orders
+
+--select *
+--from customers as c
+--left join orders as o
+--on c.id = o.customer_id
+--where o.customer_id is null
+
+-- get all orders without matching customers
+
+--select *
+--from customers as c
+--right join orders as o
+--on c.id = o.customer_id
+--where c.id is null
+
+-- get same using left join
+
+
+--select *
+--from orders as o
+--left join customers as c
+--on c.id = o.customer_id
+--where c.id is null
+
+-- Find orders without customers and customers without orders
+
+--select *
+--from customers as c
+--full join orders as o
+--on c.id = o.customer_id
+--where c.id is null 
+--or o.customer_id is null
+
+-- get all customers along with their orders, but only for customers who have placed an order (but without inner join)
+--select *
+--from customers as c
+--left join orders as o
+--on c.id = o.customer_id
+--where o.customer_id is not null
+
+-- generate all possible combinations of customers and orders
+
+--select *
+--from customers
+--cross join orders
+
+/*
+using the salesDB, retrive the list of all orders, along with the customer, product and employee details.
+for each order display- 
+order ID
+customer name
+product name
+sales amount
+product price
+salesperson's name
+*/
+
+
