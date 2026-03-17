@@ -401,4 +401,99 @@ product price
 salesperson's name
 */
 
+--select 
+--o.OrderID,
+--isnull(c.FirstName,'') + ' ' + isnull(c.LastName,''),
+--p.Product,
+--p.Price,
+--isnull(e.FirstName,'') + ' ' + isnull(e.LastName,'')
+--from Sales.Orders as o
+--left join Sales.Customers as c
+--on o.CustomerID = c.CustomerID
+--left join Sales.Products as p
+--on o.ProductID = p.ProductID
+--left join Sales.Employees as e
+--on o.SalesPersonID = e.EmployeeID
 
+-- combine all the data from employees and customer table into one table
+
+--select 
+--	FirstName,
+--	LastName
+--from Sales.Employees
+--union
+--select  
+--	FirstName,
+--	LastName
+--from Sales.Customers
+
+--combine all the data from employees and customers table into one table including duplicates
+
+--select 
+--	FirstName,
+--	LastName
+--from Sales.Employees
+--union all
+--select  
+--	FirstName,
+--	LastName
+--from Sales.Customers
+
+-- find employees who are not customers at the same time
+
+--select 
+--FirstName,
+--LastName
+--from sales.Employees
+--except
+--select 
+--FirstName,
+--LastName
+--from sales.Customers
+
+-- find the employees who are also customers
+
+--select 
+--FirstName,
+--LastName
+--from sales.Employees
+--intersect
+--select 
+--FirstName,
+--LastName
+--from sales.Customers
+
+-- orders are stored in seperate tables (orders and order archives). combine all in one table without duplicates
+
+--select
+--'Orders' as SourceTable
+--,[OrderID]
+--,[ProductID]
+--,[CustomerID]
+--,[SalesPersonID]
+--,[OrderDate]
+--,[ShipDate]
+--,[OrderStatus]
+--,[ShipAddress]
+--,[BillAddress]
+--,[Quantity]
+--,[Sales]
+--,[CreationTime]
+--from sales.Orders
+--union
+--select
+--'Orders Archive' as SourceTable
+--,[OrderID]
+--,[ProductID]
+--,[CustomerID]
+--,[SalesPersonID]
+--,[OrderDate]
+--,[ShipDate]
+--,[OrderStatus]
+--,[ShipAddress]
+--,[BillAddress]
+--,[Quantity]
+--,[Sales]
+--,[CreationTime]
+--from sales.OrdersArchive
+--order by OrderID asc
