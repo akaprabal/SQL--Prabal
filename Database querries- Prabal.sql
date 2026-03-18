@@ -497,3 +497,67 @@ salesperson's name
 --,[CreationTime]
 --from sales.OrdersArchive
 --order by OrderID asc
+
+-- concatnate first name and country in one column
+--select 
+--concat(FirstName,' ', 
+--Country)
+--from Sales.Customers
+
+-- convert the first name to lower case
+
+--select 
+--lower(first_name)
+--from customers
+
+-- convert the first name to upper case
+
+----select 
+----upper(first_name)
+----from customers
+
+-- find customers whose name contains leading or trailing space
+
+--select
+--first_name
+--from customers
+--where first_name != trim(first_name)
+
+-- remove dashes from a phone number
+
+--select '123-456-7890',
+--replace('123-456-7890','-','')
+
+-- calculate the length of each customer's first name
+
+--select *,
+--len(first_name) as first_name_length
+--from customers
+
+-- retrive the first two characters of each first name
+
+--select *,
+--left(trim(first_name),2)
+--from customers
+
+-- retrive the last two characters of each first name
+
+--select *,
+--right(trim(first_name),2)
+--from customers
+
+-- retrive the list of customer's first name after removing the first character
+
+--select *,
+--SUBSTRING(trim(first_name),2,len(first_name))
+--from customers
+
+--round
+--select 3.516,
+--round (3.516,2) as round_by_2,
+--round (3.516,1) as round_by_1,
+--round (3.516,0) as round_by_0
+
+-- absloute
+--select -10,
+--abs(-10)
